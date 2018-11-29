@@ -17,7 +17,7 @@
             <?php while(have_posts()): the_post(); ?>
                 <h3><?php the_title(); ?></h3>
                 <div class="meta">
-                    Created By <?php the_author(); ?> on <?php the_date('F j, Y g:i a'); ?>
+                    Created By <?php the_author(); ?> on <?php the_time(get_option('date_format')); ?>
                 </div>
                 <?php the_content(); ?>
             <?php endwhile; ?>
@@ -25,5 +25,9 @@
             <?php echo wpautop('No posts ware found'); ?>
         <?php endif; ?>
     </div>
+
+    <footer>
+        <p>&copy; <?php the_date('Y'); ?> - <?php bloginfo('title'); ?></p>
+    </footer>
 </body>
 </html>
