@@ -15,6 +15,10 @@ body {
     line-height: 1.7em;
 }
 
+a {
+    color: #fff;
+}
+
 header {
     background: #393939;
     color: #fff;
@@ -43,4 +47,8 @@ footer {
     color: #fff;
     padding: 10px 10px;
     text-align: center;
+}
+
+article.post{
+    border-bottom: 1px #ccc solid;
 }
