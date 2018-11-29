@@ -14,6 +14,9 @@
                         Created By <?php the_author(); ?> on <?php the_time(get_option('date_format')); ?>
                     </div>
                     <?php the_content(); ?>
+                    <a class="button" href="<?php the_permalink(); ?>">
+                        Read More
+                    </a>
                 </article>
             <?php endwhile; ?>
         <?php else : ?>
