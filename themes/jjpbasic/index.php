@@ -7,14 +7,17 @@
     <?php wp_head(); ?>
 </head>
 <body>
-    <header>
+<header>
+    <div class="container">
         <h1><?php bloginfo('name'); ?></h1>
         <span><?php bloginfo('description'); ?></span>
-    </header>
+    </div>
+</header>
 
-    <div class="main">
-        <?php if(have_posts()) : ?>
-            <?php while(have_posts()): the_post(); ?>
+<div class="main">
+    <div class="container">
+        <?php if (have_posts()) : ?>
+            <?php while (have_posts()): the_post(); ?>
                 <h3><?php the_title(); ?></h3>
                 <div class="meta">
                     Created By <?php the_author(); ?> on <?php the_time(get_option('date_format')); ?>
@@ -25,11 +28,14 @@
             <?php echo wpautop('No posts ware found'); ?>
         <?php endif; ?>
     </div>
+</div>
 
-    <footer>
+<footer>
+    <div class="container">
         <p>&copy; <?php the_date('Y'); ?> - <?php bloginfo('title'); ?></p>
-    </footer>
+    </div>
+</footer>
 
-    <?php wp_footer(); ?>
+<?php wp_footer(); ?>
 </body>
 </html>
