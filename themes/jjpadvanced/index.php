@@ -59,8 +59,8 @@
                             echo trim($output, $separator);
                         ?>
                     </p>
-                    <?php the_content(); ?>
-                    <a href="#" class="button">Read More</a>
+                    <?php the_excerpt(); ?>
+                    <a href="<?php the_permalink(); ?>" class="button">Read More</a>
                 </article>
             <?php endwhile; ?>
         <?php else : ?>
