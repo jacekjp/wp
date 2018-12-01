@@ -32,6 +32,8 @@
 
 <div class="container content">
     <div class="main block">
+        <?php if(have_posts()) : ?>
+            <?php whie(have_posts()) : the_post(); ?>
         <article class="post">
             <h2>Blog Post 1</h2>
 
@@ -39,68 +41,13 @@
 
             <p>
                 Lorizzle ipsizzle get down get down sizzle amizzle, shit adipiscing that's the shizzle. Nullizzle dizzle
-                velizzle, aliquet volutpizzle, suscipit quis, da bomb vel, funky fresh. Things mammasay mammasa mamma oo
-                sa tortizzle. Sure boofron. Fusce funky fresh dolizzle dapibizzle bizzle tempizzle pizzle. Mauris
-                pellentesque nibh shiznit turpizzle. We gonna chung da bomb for sure. Pellentesque eleifend rhoncizzle
-                nisi. In hac habitasse platea gangsta. Shiz dapibus. Curabitur get down get down urna, pretizzle check
-                it out, mattizzle the bizzle, eleifend vitae, nunc. Away izzle. Shiznit fo shizzle velit cool for sure.
-            </p>
-
-            <p>
-                Etizzle fo shizzle funky fresh sed augue hendrerit accumsizzle. I'm in the shizzle izzle fo shizzle.
-                Vivamizzle rizzle dolizzle, viverra vitae, sizzle izzle, ultrices izzle, sizzle. Vestibulum ante ipsum
-                ass izzle my shizz orci crunk izzle ultrices posuere cubilia Curae; Donizzle dolizzle. Crazy faucibus.
-                Maecenas pharetra blandit doggy. Gangster rutrum aliquizzle orci. Gangster facilisizzle. You son of a
-                bizzle daahng dawg , venenatis phat, scelerisque sheezy, blandizzle izzle, magna.
             </p>
             <a href="#" class="button">Read More</a>
         </article>
-        <article class="post">
-            <h2>Blog Post 2</h2>
-
-            <p class="meta">Posted at 15:44 on December 1 by admin</p>
-
-            <p>
-                Lorizzle ipsizzle get down get down sizzle amizzle, shit adipiscing that's the shizzle. Nullizzle dizzle
-                velizzle, aliquet volutpizzle, suscipit quis, da bomb vel, funky fresh. Things mammasay mammasa mamma oo
-                sa tortizzle. Sure boofron. Fusce funky fresh dolizzle dapibizzle bizzle tempizzle pizzle. Mauris
-                pellentesque nibh shiznit turpizzle. We gonna chung da bomb for sure. Pellentesque eleifend rhoncizzle
-                nisi. In hac habitasse platea gangsta. Shiz dapibus. Curabitur get down get down urna, pretizzle check
-                it out, mattizzle the bizzle, eleifend vitae, nunc. Away izzle. Shiznit fo shizzle velit cool for sure.
-            </p>
-
-            <p>
-                Etizzle fo shizzle funky fresh sed augue hendrerit accumsizzle. I'm in the shizzle izzle fo shizzle.
-                Vivamizzle rizzle dolizzle, viverra vitae, sizzle izzle, ultrices izzle, sizzle. Vestibulum ante ipsum
-                ass izzle my shizz orci crunk izzle ultrices posuere cubilia Curae; Donizzle dolizzle. Crazy faucibus.
-                Maecenas pharetra blandit doggy. Gangster rutrum aliquizzle orci. Gangster facilisizzle. You son of a
-                bizzle daahng dawg , venenatis phat, scelerisque sheezy, blandizzle izzle, magna.
-            </p>
-            <a href="#" class="button">Read More</a>
-        </article>
-        <article class="post">
-            <h2>Blog Post 3</h2>
-
-            <p class="meta">Posted at 15:44 on December 1 by admin</p>
-
-            <p>
-                Lorizzle ipsizzle get down get down sizzle amizzle, shit adipiscing that's the shizzle. Nullizzle dizzle
-                velizzle, aliquet volutpizzle, suscipit quis, da bomb vel, funky fresh. Things mammasay mammasa mamma oo
-                sa tortizzle. Sure boofron. Fusce funky fresh dolizzle dapibizzle bizzle tempizzle pizzle. Mauris
-                pellentesque nibh shiznit turpizzle. We gonna chung da bomb for sure. Pellentesque eleifend rhoncizzle
-                nisi. In hac habitasse platea gangsta. Shiz dapibus. Curabitur get down get down urna, pretizzle check
-                it out, mattizzle the bizzle, eleifend vitae, nunc. Away izzle. Shiznit fo shizzle velit cool for sure.
-            </p>
-
-            <p>
-                Etizzle fo shizzle funky fresh sed augue hendrerit accumsizzle. I'm in the shizzle izzle fo shizzle.
-                Vivamizzle rizzle dolizzle, viverra vitae, sizzle izzle, ultrices izzle, sizzle. Vestibulum ante ipsum
-                ass izzle my shizz orci crunk izzle ultrices posuere cubilia Curae; Donizzle dolizzle. Crazy faucibus.
-                Maecenas pharetra blandit doggy. Gangster rutrum aliquizzle orci. Gangster facilisizzle. You son of a
-                bizzle daahng dawg , venenatis phat, scelerisque sheezy, blandizzle izzle, magna.
-            </p>
-            <a href="#" class="button">Read More</a>
-        </article>
+            <?php endwhile; ?>
+        <?php else : ?>
+            <?php echo apautop('Soory, no posts ware found'); ?>
+        <?php endif; ?>
     </div>
     <div class="side">
         <div class="block">
