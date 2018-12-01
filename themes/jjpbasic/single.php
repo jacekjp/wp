@@ -23,6 +23,8 @@
         <?php else : ?>
             <?php echo wpautop('No posts ware found'); ?>
         <?php endif; ?>
+
+        <?php comments_template(); ?>
     </div>
 
 <?php get_footer(); ?>
