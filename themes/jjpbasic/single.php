@@ -1,17 +1,22 @@
 <?php get_header(); ?>
 
-<div class="main">
-    <div class="container">
+<div class="container">
+    <div class="main">
         <?php if (have_posts()) : ?>
             <?php while (have_posts()): the_post(); ?>
                 <article class="post">
                     <h3>
-                            <?php the_title(); ?>
+                        <?php the_title(); ?>
                     </h3>
+
                     <div class="meta">
-                        Created By <?php the_author(); ?> on <?php the_time(get_option('date_format')); ?>
+                        Created By
+                        <a href="<?php get_author_posts_url(get_the_author_meta('ID')); ?> ">
+                            <?php the_author(); ?>
+                        </a>
+                        on <?php the_time(get_option('date_format')); ?>
                     </div>
-                    <?php if(has_post_thumbnail()) : ?>
+                    <?php if (has_post_thumbnail()) : ?>
                         <div class="post-thumbnail">
                             <?php the_post_thumbnail(); ?>
                         </div>
@@ -22,7 +27,8 @@
         <?php else : ?>
             <?php echo wpautop('No posts ware found'); ?>
         <?php endif; ?>
+
+        <?php comments_template(); ?>
     </div>
-</div>
 
 <?php get_footer(); ?>
