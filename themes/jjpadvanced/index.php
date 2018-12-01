@@ -11,7 +11,7 @@
 <header>
     <div class="container">
         <h1>
-            <a href="index.html"><?php bloginfo('name'); ?></a>
+            <a href="<?php echo home_url(); ?>"><?php bloginfo('name'); ?></a>
             <small><?php bloginfo('description'); ?></small>
         </h1>
 
