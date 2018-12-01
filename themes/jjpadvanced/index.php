@@ -32,18 +32,22 @@
 
 <div class="container content">
     <div class="main block">
-        <?php if(have_posts()) : ?>
-            <?php whie(have_posts()) : the_post(); ?>
-        <article class="post">
-            <h2>Blog Post 1</h2>
+        <?php if (have_posts()) : ?>
+            <?php while (have_posts()) : the_post(); ?>
+                <article class="post">
+                    <h2><?php the_title(); ?></h2>
 
-            <p class="meta">Posted at 15:44 on December 1 by admin</p>
-
-            <p>
-                Lorizzle ipsizzle get down get down sizzle amizzle, shit adipiscing that's the shizzle. Nullizzle dizzle
-            </p>
-            <a href="#" class="button">Read More</a>
-        </article>
+                    <p class="meta">
+                        Posted at
+                        <?php the_time('F j, Y g:i a'); ?>
+                        by
+                        <a href="<?php echo get_author_posts_url(get_the_author_meta('ID')); ?>">
+                            <?php the_author(); ?>
+                        </a>
+                    </p>
+                    <?php the_content(); ?>
+                    <a href="#" class="button">Read More</a>
+                </article>
             <?php endwhile; ?>
         <?php else : ?>
             <?php echo apautop('Soory, no posts ware found'); ?>
