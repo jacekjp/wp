@@ -1,7 +1,7 @@
 <?php get_header(); ?>
+
 <div class="container">
     <div class="main">
-
         <?php if (have_posts()) : ?>
             <?php while (have_posts()): the_post(); ?>
                 <article class="post">
@@ -28,13 +28,6 @@
         <?php else : ?>
             <?php echo wpautop('No posts ware found'); ?>
         <?php endif; ?>
+    </div>
 
-    </div>
-    <div class="sidebar">
-        <?php if(is_active_sidebar('sidebar')) : ?>
-            <?php dynamic_sidebar('sidebar'); ?>
-        <?php endif; ?>
-    </div>
-    <div class="clr"></div>
-</div>
 <?php get_footer(); ?>
