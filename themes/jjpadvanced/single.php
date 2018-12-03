@@ -16,17 +16,17 @@
                         </a>
                         | Posted In
                         <?php
-                            $categories = get_the_category();
-                            $separator = ", ";
-                            $output = '';
+                        $categories = get_the_category();
+                        $separator = ", ";
+                        $output = '';
 
-                            if($categories){
-                                foreach($categories as $category){
-                                    $output .= '<a href="' . get_category_link($category->term_id) . '">'. $category->cat_name . '</a>'. $separator ;
-                                }
+                        if($categories){
+                            foreach($categories as $category){
+                                $output .= '<a href="' . get_category_link($category->term_id) . '">'. $category->cat_name . '</a>'. $separator ;
                             }
+                        }
 
-                            echo trim($output, $separator);
+                        echo trim($output, $separator);
                         ?>
                     </p>
                     <?php if(has_post_thumbnail()) : ?>
@@ -34,8 +34,7 @@
                             <?php the_post_thumbnail(); ?>
                         </div>
                     <?php endif; ?>
-                    <?php the_excerpt(); ?>
-                    <a href="<?php the_permalink(); ?>" class="button">Read More</a>
+                    <?php the_content(); ?>
                 </article>
             <?php endwhile; ?>
         <?php else : ?>
