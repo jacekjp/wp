@@ -139,7 +139,7 @@ article.post .meta {
     font-size: 13px;
 }
 
-article.post .meta a{
+article.post .meta a {
     color: #fff;
 }
 
@@ -148,11 +148,11 @@ article .post-thumbnail img {
     height: auto;
 }
 
-article.post-aside small{
+article.post-aside small {
     font-weight: bold;
 }
 
-article.post-aside .well{
+article.post-aside .well {
     background: #e0eefc;
     padding: 10px;
 }
@@ -215,7 +215,7 @@ footer.main-footer a {
     margin-bottom: 10px;
 }
 
-.archive-post h4, .archive-post p{
+.archive-post h4, .archive-post p {
     margin: 0;
     padding: 0;
 }
@@ -227,17 +227,17 @@ footer.main-footer a {
     font-weight: bold;
 }
 
-.sub-nav{
+.sub-nav {
     margin-top: 10px;
     float: right;
     width: 300px;
 }
 
-.sub-nav ul{
+.sub-nav ul {
     float: right;
 }
 
-.sub-nav .parent-link{
+.sub-nav .parent-link {
     font-weight: bold;
     color: #000;
     float: left;
@@ -246,12 +246,12 @@ footer.main-footer a {
     border-right: 1px solid #009acd;
 }
 
-.sub-nav .parent-link a{
+.sub-nav .parent-link a {
     font-weight: bold;
     color: #000;
 }
 
-.sub-nav .current_page_item{
+.sub-nav .current_page_item {
     font-weight: bold;
 }
 
@@ -259,7 +259,7 @@ footer.main-footer a {
     clear: both;
 }
 
-.side-widget{
+.side-widget {
     margin-bottom: 20px;
 }
 
@@ -286,10 +286,53 @@ footer.main-footer a {
     padding: 0 6px;
 }
 
-.box h3{
+.box h3 {
     text-align: center;
     background: #009acd;
     padding: 5px;
     color: #fff;
 }
 
+li.comment {
+  list-style: none;
+}
+
+.comment-body {
+    border: #ccc 1px solid;
+    margin-bottom: 10px;
+    padding: 20px 10px;
+}
+
+.comment-meta {
+    background: #333;
+    color: #fff;
+    padding: 10px;
+    overflow: auto;
+}
+
+.comment-meta img {
+    float: left;
+    margin-right: 10px;
+}
+
+.comment-meta time {
+    margin-left: 12px;
+}
+
+.comment-reply-link{
+    background: #009acd;
+    color: #fff;
+    display: inline-block;
+    padding: 10px 15px;
+}
+
+.comment-form input, .comment-form textarea {
+    width: 100%;
+    padding: 3px;
+    border: #ccc 1px solid;
+    margin-bottom: 20px;
+}
+
+.comment-form input{
+    height: 30px;
+}
