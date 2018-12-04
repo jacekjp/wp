@@ -9,6 +9,8 @@
         <?php else : ?>
             <?php echo apautop('Soory, no posts ware found'); ?>
         <?php endif; ?>
+
+        <?php comments_template(); ?>
     </div>
     <div class="side">
         <?php if(is_active_sidebar('sidebar')) : ?>
