@@ -29,6 +29,8 @@ function init_widgets($id){
     ));
 }
 
+add_action('widgets_init', 'init_widgets');
+
 //Excerpt Length
 function adv_set_excerpt_length(){
     return 25;
