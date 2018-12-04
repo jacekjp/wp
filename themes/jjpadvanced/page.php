@@ -5,6 +5,7 @@
         <?php if (have_posts()) : ?>
             <?php while (have_posts()) : the_post(); ?>
                 <article class="page">
+                    <?php if(page_is_parent() || $post->post_parent > 0) : ?>
                     <nav class="nav sub-nav">
                         <ul>
                             <span class="parent-link">
@@ -16,10 +17,10 @@
                                 'title_li' => ''
                             );
                             ?>
+                            <?php wp_list_pages($args); ?>
                         </ul>
                     </nav>
-
-                    <?php wp_list_pages($args); ?>
+                    <?php endif; ?>
                     <h2><?php the_title(); ?></h2>
                     <?php the_content(); ?>
                 </article>

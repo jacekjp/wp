@@ -33,3 +33,10 @@ function get_top_parent(){
 
     return $post->ID;
 }
+
+function page_is_parent(){
+    global $post;
+
+    $pages = get_pages('child_of='. $post->ID);
+    return count($pages);
+}
