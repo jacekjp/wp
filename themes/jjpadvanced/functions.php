@@ -23,3 +23,13 @@ function adv_set_excerpt_length(){
 }
 
 add_filter('excerpt_length', 'adv_set_excerpt_length');
+
+function get_top_parent(){
+    global $post;
+    if($post->post_parent){
+        $ancestors = get_post_ancestors($post->ID);
+        return $ancestors[0];
+    }
+
+    return $post->ID;
+}
