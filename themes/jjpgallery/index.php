@@ -1,44 +1,11 @@
 <?php get_header(); ?>
-    <div class="w3-col m4 l4 pic">
-        <a href="single.html">
-            <img src="images/1.jpg" class="w3-animate-opacity">
 
-            <p>Pimpin' ipsum dolor sit amet, consectetuer adipiscing sizzle.</p>
-        </a>
-    </div>
-    <div class="w3-col m4 l4 pic">
-        <a href="single.html">
-            <img src="images/2.jpg" class="w3-animate-opacity">
+<?php if (have_posts()) : ?>
+    <?php while (have_posts()) : the_post(); ?>
+        <?php get_template_part('content', get_post_format()); ?>
+    <?php endwhile; ?>
+<?php else : ?>
+    <?php echo wpautop('Sorry, no posts'); ?>
+<?php endif; ?>
 
-            <p>Pimpin' ipsum dolor sit amet, consectetuer adipiscing sizzle.</p>
-        </a>
-    </div>
-    <div class="w3-col m4 l4 pic">
-        <a href="single.html">
-            <img src="images/3.jpg" class="w3-animate-opacity">
-
-            <p>Pimpin' ipsum dolor sit amet, consectetuer adipiscing sizzle.</p>
-        </a>
-    </div>
-    <div class="w3-col m4 l4 pic">
-        <a href="single.html">
-            <img src="images/4.jpg" class="w3-animate-opacity">
-
-            <p>Pimpin' ipsum dolor sit amet, consectetuer adipiscing sizzle.</p>
-        </a>
-    </div>
-    <div class="w3-col m4 l4 pic">
-        <a href="single.html">
-            <img src="images/5.jpg" class="w3-animate-opacity">
-
-            <p>Pimpin' ipsum dolor sit amet, consectetuer adipiscing sizzle.</p>
-        </a>
-    </div>
-    <div class="w3-col m4 l4 pic">
-        <a href="single.html">
-            <img src="images/6.jpg" class="w3-animate-opacity">
-
-            <p>Pimpin' ipsum dolor sit amet, consectetuer adipiscing sizzle.</p>
-        </a>
-    </div>
 <?php get_footer(); ?>
