@@ -23,4 +23,10 @@ function init_widgets($id){
 
 add_action('widgets_init', 'init_widgets');
 
-//Register widgets
+
+//Register Widgets
+function custom_register_widgets(){
+    regiser_widget('WP_Widget_Categories_Custom');
+}
+
+add_action('widgets_init', 'custom_register_widgets');
