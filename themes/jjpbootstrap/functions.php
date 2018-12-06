@@ -27,3 +27,11 @@ function init_widgets($id){
 }
 
 add_action('widgets_init', 'init_widgets');
+
+// Adds 'list-group-item' to categories li
+function add_new_class_list_categories($list){
+    $list = str_replace('cat-item', 'cat-item list-group-item', $list);
+    return $list;
+}
+
+add_filter('wp_list_categories', 'add_new_class_list_categories');
