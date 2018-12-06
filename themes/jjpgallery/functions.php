@@ -1,5 +1,7 @@
 <?php
 
+require_once('widgets/class-wp-widget-categories.php');
+
 // Theme Support
 function jjp_gallery_theme_support(){
     //Featured Image Support
@@ -26,7 +28,7 @@ add_action('widgets_init', 'init_widgets');
 
 //Register Widgets
 function custom_register_widgets(){
-    regiser_widget('WP_Widget_Categories_Custom');
+    register_widget('WP_Widget_Categories_Custom');
 }
 
 add_action('widgets_init', 'custom_register_widgets');
