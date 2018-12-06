@@ -1,5 +1,7 @@
 <?php
 
+require_once('widgets/class-wp-widget-categories.php');
+
 // Theme Support
 function jjp_gallery_theme_support(){
     //Featured Image Support
@@ -12,3 +14,21 @@ function jjp_gallery_theme_support(){
 }
 
 add_action('after_setup_theme', 'jjp_gallery_theme_support');
+
+//Widget Locations
+function init_widgets($id){
+    register_sidebar(array(
+        'name' => 'Sidebar',
+        'id' => 'sidebar'
+    ));
+}
+
+add_action('widgets_init', 'init_widgets');
+
+
+//Register Widgets
+function custom_register_widgets(){
+    register_widget('WP_Widget_Categories_Custom');
+}
+
+add_action('widgets_init', 'custom_register_widgets');
