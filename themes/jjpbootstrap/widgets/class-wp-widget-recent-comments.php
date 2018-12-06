@@ -14,7 +14,7 @@
  *
  * @see WP_Widget
  */
-class WP_Widget_Recent_Comments extends WP_Widget {
+class WP_Widget_Recent_Comments_Custom extends WP_Widget {
 
 	/**
 	 * Sets up a new Recent Comments widget instance.
