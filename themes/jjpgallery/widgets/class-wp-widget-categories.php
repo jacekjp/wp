@@ -56,7 +56,7 @@ class WP_Widget_Categories_Custom extends WP_Widget {
         echo $args['before_widget'];
 
         if ( $title ) {
-            echo $args['before_title'] . $title . $args['after_title'];
+//            echo $args['before_title'] . $title . $args['after_title'];
         }
 
         $cat_args = array(
@@ -108,7 +108,8 @@ class WP_Widget_Categories_Custom extends WP_Widget {
         <?php
         } else {
             ?>
-            <ul>
+            <ul class="w3-ul">
+                <li><a href="/wordpress">All Photos</a></li>
                 <?php
                 $cat_args['title_li'] = '';
 
