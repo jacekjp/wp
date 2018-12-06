@@ -14,7 +14,10 @@
             <h1><?php bloginfo('name'); ?></h1>
         </div>
         <div class="w3-col m3 l3">
-            <input class="w3-input" type="text" placeholder="Search">
+            <form method="get" action="<?php echo esc_url(home_url('/')); ?>">
+                <input name="s" class="w3-input" type="text" placeholder="Search">
+            </form>
+
         </div>
     </div>
 </header>
