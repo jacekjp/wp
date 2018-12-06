@@ -84,13 +84,13 @@ class WP_Widget_Recent_Posts_Custom extends WP_Widget {
 			echo $args['before_title'] . $title . $args['after_title'];
 		}
 		?>
-		<ul>
+		<ul class="list-group">
 			<?php foreach ( $r->posts as $recent_post ) : ?>
 				<?php
 				$post_title = get_the_title( $recent_post->ID );
 				$title      = ( ! empty( $post_title ) ) ? $post_title : __( '(no title)' );
 				?>
-				<li>
+				<li class="list-group-item">
 					<a href="<?php the_permalink( $recent_post->ID ); ?>"><?php echo $title ; ?></a>
 					<?php if ( $show_date ) : ?>
 						<span class="post-date"><?php echo get_the_date( '', $recent_post->ID ); ?></span>
