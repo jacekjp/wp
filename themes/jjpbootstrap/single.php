@@ -42,6 +42,7 @@
                             </article>
                         <?php endwhile; ?>
                     <?php endif; ?>
+                    <?php comments_template(); ?>
                 </div>
             </div>
         </div>
