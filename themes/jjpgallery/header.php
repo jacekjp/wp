@@ -8,7 +8,7 @@
     <?php wp_head(); ?>
 </head>
 <body <?php body_class(); ?>>
-<header class="w3-container w3-teal">
+<header class="w3-container">
     <div class="w3-row">
         <div class="w3-col m9 l9">
             <h1><?php bloginfo('name'); ?></h1>
