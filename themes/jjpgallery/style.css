@@ -6,7 +6,7 @@ Version: 1.0
 */
 
 body {
-    background: #000;
+    background: #101010;
     color: #fff;
 }
 
@@ -24,6 +24,15 @@ input {
 
 img {
     width: 100%;
+    height: auto;
+}
+
+.w3-btn {
+    background: #172531;
+}
+
+header {
+    background: #172531;
 }
 
 header input {
@@ -46,5 +55,30 @@ footer {
     text-align: center;
     margin-top: 40px;
     border-top: #333 solid 1px;
+}
+
+.post-thumbnail a{
+    position: relative;
+    display: block;
+}
+
+.post-thumbnail a p {
+    position: absolute;
+    width: 100%;
+    text-align: center;
+    background: rgba(0,0,0,0.6);
+    padding: 10px;
+    margin: 0;
+    bottom: 0;
+    display: none;
+}
+
+.post-thumbnail:hover a p {
+    display: block;
+}
+
+.w3-grayscale-max:hover {
+    -webkit-filter: grayscale(0%); /* Safari 6.0 - 9.0 */
+    filter: grayscale(0%);
 }
 

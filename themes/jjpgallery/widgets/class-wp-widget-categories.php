@@ -109,7 +109,7 @@ class WP_Widget_Categories_Custom extends WP_Widget {
         } else {
             ?>
             <ul class="w3-ul">
-                <li><a href="/wordpress">All Photos</a></li>
+                <li><a href="<?php echo esc_url(home_url('/')); ?>">All Photos</a></li>
                 <?php
                 $cat_args['title_li'] = '';
 
