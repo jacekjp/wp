@@ -26,7 +26,7 @@
             <div class="w3-row">
                 <div class="w3-col l2">
                     <br />
-                    <a href="<?php echo site_url(); ?>" class="w3-btn w3-red">Back</a>
+                    <a href="<?php echo site_url(); ?>" class="w3-btn">Back</a>
                 </div>
                 <div class="w3-col l10">
                     <h1><?php the_title(); ?></h1>

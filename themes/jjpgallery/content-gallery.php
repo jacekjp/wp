@@ -3,13 +3,17 @@
         <div class="post-thumbnail">
             <?php
                 $attr = array(
-                    'class' => 'w3-animate-opacity w3-hover-opacity'
+                    'class' => 'w3-animate-opacity w3-grayscale-max'
                 );
             ?>
 
-            <a href="<?php echo the_permalink(); ?>"><?php echo get_the_post_thumbnail($id, 'large', $attr); ?></a>
+            <a href="<?php echo the_permalink(); ?>">
+                <?php echo get_the_post_thumbnail($id, 'large', $attr); ?>
+                <?php the_content(); ?>
+            </a>
+
         </div>
 
     <?php endif; ?>
-    <?php the_content(); ?>
+
 </div>
